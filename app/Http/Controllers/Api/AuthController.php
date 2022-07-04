@@ -40,6 +40,7 @@ class AuthController extends Controller
         ];
         return response()->json($response, 200);
     }
+    // Untuk Login
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
